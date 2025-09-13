@@ -9,15 +9,41 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@auth/prisma-adapter": "^2.10.0",
+    "@prisma/client": "^6.15.0",
+    "@tiptap/core": "^3.4.2",
+    "@tiptap/extension-color": "^3.4.2",
+    "@tiptap/extension-font-family": "^3.4.2",
+    "@tiptap/extension-highlight": "^3.4.2",
+    "@tiptap/extension-subscript": "^3.4.2",
+    "@tiptap/extension-superscript": "^3.4.2",
+    "@tiptap/extension-text-style": "^3.4.2",
+    "@tiptap/extension-underline": "^3.4.2",
+    "@tiptap/pm": "^3.4.2",
+    "@tiptap/react": "^3.4.2",
+    "@tiptap/starter-kit": "^3.4.2",
+    "axios": "^1.12.0",
+    "daisyui": "^5.1.9",
+    "date-fns": "^4.1.0",
+    "flowbite-react": "^0.12.9",
+    "flowbite-typography": "^1.0.5",
+    "next": "15.5.2",
+    "next-auth": "^4.24.11",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "next": "15.5.2"
+    "react-markdown": "^10.1.0",
+    "react-syntax-highlighter": "^15.6.6",
+    "remark-gfm": "^4.0.1",
+    "swr": "^2.3.6"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4.1.13",
+    "@types/node": "24.3.1",
+    "@types/react": "19.1.12",
     "eslint": "^9",
     "eslint-config-next": "15.5.2",
-    "@eslint/eslintrc": "^3"
+    "prisma": "^6.15.0",
+    "tailwindcss": "^4.1.13"
   }
 }

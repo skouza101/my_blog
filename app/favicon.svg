@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Gradient definition -->
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6; stop-opacity:1"></stop> <!-- blue-500 -->
+      <stop offset="100%" style="stop-color:#9333ea; stop-opacity:1"></stop> <!-- purple-600 -->
+    </linearGradient>
+  </defs>
+
+  <!-- Square background -->
+  <rect width="64" height="64" rx="12" fill="url(#grad)"></rect>
+
+  <!-- Icon (white stroke) -->
+  <path d="M32 16v32m0-32C28.5 15 24.5 14 20 14s-8.5 1-12 2v32c3.5-1 7.5-2 12-2s8.5 1 12 2m0-32c3.5-1 7.5-2 12-2s8.5 1 12 2v32c-3.5-1-7.5-2-12-2s-8.5 1-12 2" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
