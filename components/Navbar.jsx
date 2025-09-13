@@ -37,129 +37,130 @@ function Navbar() {
           </span>
         </Link>
 
-        {!isLoading ? 
-        isLogin ? (
-          <div className="flex gap-x-3 md:order-1">
-            <button
-              onClick={() => setIsModalOpen(true)}
-              className="group relative px-6 py-2.5 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-medium rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 overflow-hidden"
-              type="button"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
-              <div className="relative flex items-center gap-x-2">
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 4v16m8-8H4"
-                  />
-                </svg>
-                <span>Create Post</span>
-              </div>
-            </button>
-
-            {isModalOpen && (
-              <Createpost setIsModalOpen={setIsModalOpen} />
-              
-            )}
-
-            <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-              <div className="dropdown dropdown-end">
-                <div
-                  tabIndex={0}
-                  role="button"
-                  className="btn btn-ghost btn-circle avatar hover:scale-110 transition-transform duration-200"
-                >
-                  <div className="ring-2 ring-blue-500/30 ring-offset-2 ring-offset-white dark:ring-offset-gray-900 w-10 h-10 rounded-full overflow-hidden">
-                    <img
-                      src={
-                        session?.user?.image ||
-                        "https://imgs.search.brave.com/CFBTYPNRel95sDw00APELv5D4Ghs73sYYcN0-tLpV5U/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tYXJr/ZXRwbGFjZS5jYW52/YS5jb20vZ0pseTAv/TUFHRGtNZ0pseTAv/MS90bC9jYW52YS11/c2VyLXByb2ZpbGUt/aWNvbi12ZWN0b3Iu/LWF2YXRhci1vci1w/ZXJzb24taWNvbi4t/cHJvZmlsZS1waWN0/dXJlLC1wb3J0cmFp/dC1zeW1ib2wuLU1B/R0RrTWdKbHkwLnBu/Zw"
-
-                      }
-                      alt="Profile"
-                      className="w-full h-full object-cover"
+        {!isLoading ? (
+          isLogin ? (
+            <div className="flex gap-x-3 md:order-1">
+              <button
+                onClick={() => setIsModalOpen(true)}
+                className="group relative px-3 sm:py-2 sm:px-6 py-2.5 bg-white  dark:bg-gray-800 text-gray-700 dark:text-white font-medium rounded-xl border border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-blue-300 dark:hover:border-blue-500 transition-all duration-200 transform hover:scale-105  shadow-lg hover:shadow-xl   overflow-hidden"
+                type="button"
+              >
+                <div className="relative flex items-center gap-x-2">
+                  <svg
+                    className="w-6 h-6 text-gray-800 dark:text-white"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M12 7.757v8.486M7.757 12h8.486M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                     />
-                  </div>
+                  </svg>
+
+                  <span className="sm-hidden block">Create Post</span>
                 </div>
-                <ul
-                  tabIndex={0}
-                  className="mt-3 z-[1] p-2 shadow-2xl menu menu-sm dropdown-content bg-white/95 dark:bg-gray-800/95 backdrop-blur-xl rounded-2xl w-56 border border-white/20 dark:border-gray-700/50"
-                >
-                  <div className="px-4 py-4 border-b border-gray-100 dark:border-gray-700">
-                    <div className="flex flex-col space-y-1 items-center">
-                      <div className="font-semibold text-gray-900 dark:text-white">
-                        {session?.user?.name || "User"}
-                      </div>
-                      <div className="text-sm text-gray-500 dark:text-gray-400 truncate">
-                        {session?.user?.email || "user@example.com"}
-                      </div>
+              </button>
+
+              {isModalOpen && <Createpost setIsModalOpen={setIsModalOpen} />}
+
+              <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <div className="dropdown dropdown-end">
+                  <div
+                    tabIndex={0}
+                    role="button"
+                    className="btn btn-ghost btn-circle avatar hover:scale-110 transition-transform duration-200"
+                  >
+                    <div className="ring-2 ring-blue-500/30 ring-offset-2 ring-offset-white dark:ring-offset-gray-900 w-10 h-10 rounded-full overflow-hidden">
+                      <img
+                        src={
+                          session?.user?.image ||
+                          "https://imgs.search.brave.com/CFBTYPNRel95sDw00APELv5D4Ghs73sYYcN0-tLpV5U/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tYXJr/ZXRwbGFjZS5jYW52/YS5jb20vZ0pseTAv/TUFHRGtNZ0pseTAv/MS90bC9jYW52YS11/c2VyLXByb2ZpbGUt/aWNvbi12ZWN0b3Iu/LWF2YXRhci1vci1w/ZXJzb24taWNvbi4t/cHJvZmlsZS1waWN0/dXJlLC1wb3J0cmFp/dC1zeW1ib2wuLU1B/R0RrTWdKbHkwLnBu/Zw"
+                        }
+                        alt="Profile"
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                   </div>
-                  <li className="hover:bg-gray-50 dark:hover:bg-gray-700/50 rounded-xl mx-1 my-1">
-                    <a
-                      href={`/profile/${session?.user?.id}`}
-                      className="flex items-center gap-3 px-4 py-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
-                    >
-                      <svg
-                        className="w-5 h-5"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
+                  <ul
+                    tabIndex={0}
+                    className="mt-3 z-[1] p-2 shadow-2xl menu menu-sm dropdown-content bg-white/95 dark:bg-gray-800/95 backdrop-blur-xl rounded-2xl w-56 border border-white/20 dark:border-gray-700/50"
+                  >
+                    <div className="px-4 py-4 border-b border-gray-100 dark:border-gray-700">
+                      <div className="flex flex-col space-y-1 items-center">
+                        <div className="font-semibold text-gray-900 dark:text-white">
+                          {session?.user?.name || "User"}
+                        </div>
+                        <div className="text-sm text-gray-500 dark:text-gray-400 truncate">
+                          {session?.user?.email || "user@example.com"}
+                        </div>
+                      </div>
+                    </div>
+                    <li className="hover:bg-gray-50 dark:hover:bg-gray-700/50 rounded-xl mx-1 my-1">
+                      <a
+                        href={`/profile/${session?.user?.id}`}
+                        className="flex items-center gap-3 px-4 py-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
                       >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                        />
-                      </svg>
-                      Profile
-                    </a>
-                  </li>
-                  <li className="hover:bg-red-50 dark:hover:bg-red-900/20 rounded-xl mx-1 my-1">
-                    <a
-                      onClick={() => signOut()}
-                      className="flex items-center gap-3 px-4 py-3 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors duration-200 cursor-pointer"
-                    >
-                      <svg
-                        className="w-5 h-5"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
+                        <svg
+                          className="w-5 h-5"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                          />
+                        </svg>
+                        Profile
+                      </a>
+                    </li>
+                    <li className="hover:bg-red-50 dark:hover:bg-red-900/20 rounded-xl mx-1 my-1">
+                      <a
+                        onClick={() => signOut()}
+                        className="flex items-center gap-3 px-4 py-3 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors duration-200 cursor-pointer"
                       >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
-                        />
-                      </svg>
-                      Sign out
-                    </a>
-                  </li>
-                </ul>
+                        <svg
+                          className="w-5 h-5"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+                          />
+                        </svg>
+                        Sign out
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
+          ) : (
+            <button
+              onClick={() => signIn("google")}
+              className="px-6 py-2.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-medium rounded-xl border border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-blue-300 dark:hover:border-blue-500 transition-all duration-200 transform hover:scale-105"
+            >
+              Login
+            </button>
+          )
         ) : (
-          <button
-            onClick={() => signIn("google")}
-            className="px-6 py-2.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-medium rounded-xl border border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-blue-300 dark:hover:border-blue-500 transition-all duration-200 transform hover:scale-105"
-          >
-            Login
+          <button className="px-6 py-2.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-medium rounded-xl border border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-blue-300 dark:hover:border-blue-500 transition-all duration-200 transform hover:scale-105">
+            Loading
           </button>
-        ): <button
-        className="px-6 py-2.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-medium rounded-xl border border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-blue-300 dark:hover:border-blue-500 transition-all duration-200 transform hover:scale-105"
-      >
-        Loading
-      </button>}
+        )}
       </div>
     </nav>
   );
