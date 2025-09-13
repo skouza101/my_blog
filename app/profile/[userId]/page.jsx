@@ -32,7 +32,7 @@ const ProfilePage = () => {
             verified: userData.verified || Math.random() > 0.5
           });
           setStats({
-            posts: userData.postsCount || Math.floor(Math.random() * 50) + 10,
+            posts: userData.postsCount || 0,
             followers: userData.followersCount || Math.floor(Math.random() * 500) + 50,
             following: userData.followingCount || Math.floor(Math.random() * 200) + 20
           });
