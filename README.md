@@ -19,7 +19,7 @@ A modern, beautiful, and responsive blog platform built with [Next.js](https://n
 
 ## 📸 Preview
 
-![Blog Home Preview](https://myblog-two-weld.vercel.app/)
+[Blog Home Preview](https://myblog-two-weld.vercel.app/)
 
 ---
 
